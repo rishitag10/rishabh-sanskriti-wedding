@@ -1,41 +1,167 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rishabh & Sanskriti Wedding</title>
-<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Playfair Display',serif;
+background:#faf6ef;
+color:#6b4b2a;
+text-align:center;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+padding:40px 20px;
+}
+
+.blessing{
+font-size:20px;
+margin-top:40px;
+}
+
+.invite{
+margin-top:20px;
+font-size:22px;
+}
+
+.names{
+font-family:'Pinyon Script',cursive;
+font-size:60px;
+margin:20px 0;
+color:#b08a4a;
+}
+
+.countdown{
+font-size:24px;
+margin:30px 0;
+}
+
+.card{
+background:white;
+padding:30px;
+margin:30px 0;
+border-radius:12px;
+box-shadow:0px 6px 20px rgba(0,0,0,0.1);
+}
+
+.button{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#b08a4a;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+
+.footer{
+margin:40px 0;
+font-size:18px;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<section class="hero">
-<h1>Together with their families</h1>
-<h2>Rishabh Gupta & Sanskriti Gupta</h2>
-<p>Request the honour of your presence</p>
-<div id="countdown"></div>
-</section>
+<div class="container">
 
-<section class="events">
+<div class="blessing">
+With the blessings of their parents
+</div>
+
+<div class="invite">
+Together with their families invite you to celebrate the wedding of
+</div>
+
+<div class="names">
+Rishabh Gupta<br>&<br>Sanskriti Gupta
+</div>
+
+<div id="countdown" class="countdown"></div>
+
+<div class="card">
+
 <h2>14 April 2026</h2>
-<ul>
-<li>Tika – 6:00 PM</li>
-<li>Engagement – 7:00 PM</li>
-<li>Dinner – 8:00 PM</li>
-<li>Sangeet – 9:00 PM</li>
-</ul>
-<p>Radisson Blu (Hall Amber‑3), Kaushambi, Ghaziabad</p>
-<a href="https://maps.google.com?q=Radisson+Blu+Kaushambi+Ghaziabad" target="_blank">Open Map</a>
+
+<p>Tika – 6 PM</p>
+<p>Engagement – 7 PM</p>
+<p>Dinner – 8 PM</p>
+<p>Sangeet – 9 PM</p>
+
+<p>
+Radisson Blu (Hall Amber-3)<br>
+Kaushambi, Ghaziabad
+</p>
+
+<a class="button"
+href="https://maps.google.com?q=Radisson+Blu+Kaushambi"
+target="_blank">
+Open Map
+</a>
+
+</div>
+
+<div class="card">
 
 <h2>15 April 2026</h2>
-<ul>
-<li>Reception of Barat – 8:00 PM</li>
-<li>Dinner – 9:00 PM</li>
-</ul>
-<p>Aureate Banquet, Hall No.1, Yamuna Sports Complex, Delhi‑110092</p>
-<a href="https://maps.google.com?q=Yamuna+Sports+Complex+Delhi" target="_blank">Open Map</a>
-</section>
 
-<script src="script.js"></script>
+<p>Reception of Barat – 8 PM</p>
+<p>Dinner – 9 PM</p>
+
+<p>
+Aureate Banquet Hall<br>
+Yamuna Sports Complex, Delhi
+</p>
+
+<a class="button"
+href="https://maps.google.com?q=Yamuna+Sports+Complex+Delhi"
+target="_blank">
+Open Map
+</a>
+
+</div>
+
+<div class="footer">
+We look forward to celebrating with you
+</div>
+
+</div>
+
+<script>
+
+var countDownDate=new Date("April 14, 2026 18:00:00").getTime();
+
+var x=setInterval(function(){
+
+var now=new Date().getTime();
+
+var distance=countDownDate-now;
+
+var days=Math.floor(distance/(1000*60*60*24));
+
+var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+
+var seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("countdown").innerHTML=
+days+" days "+hours+" hrs "+minutes+" mins "+seconds+" secs ";
+
+},1000);
+
+</script>
+
 </body>
 </html>
