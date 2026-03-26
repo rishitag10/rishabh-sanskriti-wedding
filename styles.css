@@ -1,0 +1,26 @@
+
+body {
+font-family: Georgia, serif;
+margin: 0;
+background: #4b0f1f;
+color: gold;
+text-align: center;
+}
+
+.hero {
+padding: 100px 20px;
+}
+
+.events {
+padding: 50px 20px;
+}
+
+a {
+display: inline-block;
+margin: 10px;
+padding: 10px 20px;
+background: gold;
+color: #4b0f1f;
+text-decoration: none;
+border-radius: 5px;
+}
